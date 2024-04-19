@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css2?family=Jersey+10&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+    --ft-size: clamp(32px, 5vw, 12px);
+}
+
+body {
+    background-color: #1b3B3B;
+
+    main .container {
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+        .containerPassword {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            background-color: #3aaaaaa1;
+            border-radius: 25px;
+            width: 100%;
+            height: fit-content;
+            padding: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+            h1 {
+                color: #fff;
+                text-align: center;
+                font-size: clamp(64px, 5vw, 16px);
+            }
+
+            .passwordBox {
+                width: 100%;
+
+                #password {
+                    border-radius: 25px;
+                    width: 100%;
+                    border: none;
+                    font-size: 32px;
+                    text-align: center;
+                    padding: 1rem 0;
+                }
+            }
+
+            .buttonBox {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                width: 100%;
+
+                button {
+                    padding: 2rem;
+                    font-size: var(--ft-size);
+                    border-radius: 25px;
+                    border: none;
+                    width: 100%;
+                    cursor: pointer;
+                }
+
+                #generate {
+                    background-color: #52bdbd;
+
+                    &:hover {
+                        background-color: #49a8a8;
+                        transition: ease-in .2s;
+                    }
+                }
+
+                #copy {
+                    border: 3px solid #dbd178;
+                    background: none;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #dbd178;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 700px) {
+    body {
+
+        /* background-color : red; */
+        main .container {
+            .buttonBox {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    }
+}
+@media (min-width : 700px) {
+    .container{
+        max-width: calc(100vw - 30%);
+    }
+}
